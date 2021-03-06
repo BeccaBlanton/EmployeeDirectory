@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import Container from "../Container"
 import Col from "../Col"
 import Row from "../Row"
-//import Title from "../Title"
+import Title from "../Title"
 import MainTable from "../MainTable"
 import TableRow  from "../TableRow"
 import TableHeaders from "../TableHeaders"
 import employees from "../../employees.json"
+
 class Wrapper extends Component {
   state = {
     employees
@@ -16,6 +17,7 @@ class Wrapper extends Component {
   render() {
     return (
       <Container>
+          <Title/>
         <Row>
           <Col size="md-8">
             <MainTable>
