@@ -28,6 +28,11 @@ class Wrapper extends Component {
     this.setState({ employees });
   }
 
+  formSort = (data) =>{
+    const sorted = this.state.employees
+    sorted.sort((a, b)=> (a[data] > b[data]) ? 1: -1)
+    this.setState({employees: sorted})
+  }
   render() {
     return (
       <Container>
@@ -38,7 +43,7 @@ class Wrapper extends Component {
         <Row>
           <Col size="md-8">
             <MainTable>
-                <TableHeaders/>
+                <TableHeaders formSort={this.formSort}/>
               {this.state.employees.map(employee => (
                 <TableRow
                 key ={employee.id}
