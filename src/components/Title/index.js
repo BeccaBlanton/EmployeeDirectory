@@ -1,9 +1,9 @@
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Container from 'react-bootstrap/Container'
-
+import "./title.css";
 function Title() {
     return (
-        <Jumbotron fluid>
+        <Jumbotron className= "jumbotron" fluid>
         <Container>
           <h1>Employee Directory</h1>
           <p>
